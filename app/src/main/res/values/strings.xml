@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">8227457Assignment2</string>
+
+    <string name="app_name">Investment Portfolio</string>
+
+    <!-- Login -->
+    <string name="login_title">Investment Portfolio</string>
+    <string name="login_subtitle">Sign in to view your investment dashboard</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Investment Dashboard</string>
+    <string name="investment_count_zero">0 investments</string>
+
+    <!-- Details -->
+    <string name="current_price">Current Price</string>
+    <string name="dividend_yield">Dividend Yield</string>
+    <string name="description">Description</string>
+
+    <!-- Navigation -->
+    <string name="nav_login">Login</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_details">Details</string>
+
 </resources>
