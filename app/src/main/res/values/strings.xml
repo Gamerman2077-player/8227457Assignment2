@@ -12,11 +12,27 @@
     <!-- Dashboard -->
     <string name="dashboard_title">Investment Dashboard</string>
     <string name="investment_count_zero">0 investments</string>
+    <string name="portfolio_label">Portfolio</string>
+    <string name="available_funds_label">Available Funds</string>
+    <string name="portfolio_placeholder">$0.00</string>
+    <string name="available_funds_placeholder">$0.00</string>
+    <string name="hidden_balance">••••••</string>
+    <string name="show_balances">Show balances</string>
+    <string name="hide_balances">Hide balances</string>
 
     <!-- Details -->
     <string name="current_price">Current Price</string>
     <string name="dividend_yield">Dividend Yield</string>
     <string name="description">Description</string>
+
+    <string name="market_trend">Market Trend</string>
+    <string name="illustrative_history">Illustrative trend based on current API price</string>
+
+    <string name="time_1d">1D</string>
+    <string name="time_1w">1W</string>
+    <string name="time_1m">1M</string>
+    <string name="time_1y">1Y</string>
+    <string name="time_all">ALL</string>
 
     <!-- Navigation -->
     <string name="nav_login">Login</string>

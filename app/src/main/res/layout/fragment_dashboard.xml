@@ -1,62 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@android:color/black"
+    android:paddingStart="14dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="10dp">
 
+    <!-- Title -->
     <TextView
         android:id="@+id/tvDashboardTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/exo2_regular"
         android:text="@string/dashboard_title"
-        android:textSize="28sp"
-        android:textStyle="bold"
+        android:textColor="@color/accent_magenta"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Investment count -->
     <TextView
-        android:id="@+id/tvEntityCount"
+        android:id="@+id/tvInvestmentCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/exo2_regular"
         android:text="@string/investment_count_zero"
-        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDashboardTitle" />
 
+    <!-- Compact summary cards -->
+    <LinearLayout
+        android:id="@+id/layoutSummaryCards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvInvestmentCount">
+
+        <!-- Portfolio card -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="142dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_secondary_card"
+            android:paddingStart="10dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvPortfolioLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/exo2_regular"
+                android:text="@string/portfolio_label"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@id/btnPortfolioVisibility"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="6dp" />
+
+            <ImageButton
+                android:id="@+id/btnPortfolioVisibility"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/hide_balances"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_visibility"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/accent_magenta" />
+
+            <TextView
+                android:id="@+id/tvPortfolioValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/exo2_regular"
+                android:text="@string/portfolio_placeholder"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPortfolioLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Available funds card -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="142dp"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_secondary_card"
+            android:paddingStart="10dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvAvailableFundsLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/exo2_regular"
+                android:text="@string/available_funds_label"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@id/btnAvailableFundsVisibility"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="6dp" />
+
+            <ImageButton
+                android:id="@+id/btnAvailableFundsVisibility"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/hide_balances"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_visibility"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/accent_magenta" />
+
+            <TextView
+                android:id="@+id/tvAvailableFundsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/exo2_regular"
+                android:text="@string/available_funds_placeholder"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAvailableFundsLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <!-- Investments list -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewInvestments"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:clipToPadding="false"
-        android:paddingBottom="16dp"
+        android:overScrollMode="never"
+        android:paddingBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvEntityCount" />
+        app:layout_constraintTop_toBottomOf="@id/layoutSummaryCards" />
 
+    <!-- Loading -->
     <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:visibility="gone"
+        app:indicatorColor="@color/accent_magenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Error -->
     <TextView
         android:id="@+id/tvError"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
+        android:fontFamily="@font/exo2_regular"
         android:gravity="center"
         android:textColor="?attr/colorError"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

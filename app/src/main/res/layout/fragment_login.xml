@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_background"
     android:importantForAutofill="noExcludeDescendants"
-    android:padding="24dp">
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="24dp">
 
     <TextView
         android:id="@+id/tvAppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/orbitron_regular"
         android:text="@string/login_title"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/tvSubtitle"
+        android:textColor="@color/text_primary"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/exo2_regular"
+        android:gravity="center"
         android:text="@string/login_subtitle"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@id/usernameLayout"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvAppTitle" />
@@ -38,6 +44,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:hint="@string/username"
+        app:boxBackgroundColor="@color/surface_medium"
+        app:boxStrokeColor="@color/accent_magenta"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:hintTextColor="@color/text_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvSubtitle">
@@ -46,9 +57,12 @@
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/exo2_regular"
             android:importantForAutofill="no"
             android:inputType="text"
-            android:maxLines="1" />
+            android:maxLines="1"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,7 +73,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="@string/password"
+        app:boxBackgroundColor="@color/surface_medium"
+        app:boxStrokeColor="@color/accent_magenta"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
         app:endIconMode="password_toggle"
+        app:endIconDrawable="@drawable/ic_password_visibility_selector"
+        app:endIconTint="@color/accent_magenta"
+        app:hintTextColor="@color/text_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/usernameLayout">
@@ -68,9 +89,12 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/exo2_regular"
             android:importantForAutofill="no"
             android:inputType="textPassword"
-            android:maxLines="1" />
+            android:maxLines="1"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,8 +103,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:fontFamily="@font/exo2_regular"
         android:gravity="center"
-        android:textColor="?attr/colorError"
+        android:textColor="@color/error"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,9 +116,12 @@
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/exo2_regular"
         android:text="@string/sign_in"
         android:textAllCaps="false"
         android:textSize="16sp"
+        app:backgroundTint="@color/accent_magenta"
+        app:cornerRadius="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvError" />
@@ -104,6 +132,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:visibility="gone"
+        app:indicatorColor="@color/accent_magenta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnLogin" />

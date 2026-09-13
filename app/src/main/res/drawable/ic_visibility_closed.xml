@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Closed eyelid -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M4,11.5 C7,15.5 17,15.5 20,11.5"
+        android:strokeColor="@color/text_primary"
+        android:strokeLineCap="round"
+        android:strokeWidth="2" />
+
+    <!-- Left eyelash -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M7,14 L5.8,16"
+        android:strokeColor="@color/text_primary"
+        android:strokeLineCap="round"
+        android:strokeWidth="1.6" />
+
+    <!-- Centre eyelash -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M12,15 L12,17"
+        android:strokeColor="@color/text_primary"
+        android:strokeLineCap="round"
+        android:strokeWidth="1.6" />
+
+    <!-- Right eyelash -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M17,14 L18.2,16"
+        android:strokeColor="@color/text_primary"
+        android:strokeLineCap="round"
+        android:strokeWidth="1.6" />
+
+</vector>

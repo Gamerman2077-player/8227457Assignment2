@@ -1,59 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="2dp">
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/surface_medium"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/accent_magenta"
+    app:strokeWidth="1dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="92dp"
         android:padding="16dp">
 
         <TextView
             android:id="@+id/tvTicker"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
+            android:fontFamily="@font/exo2_regular"
+            android:textColor="@color/accent_magenta"
+            android:textSize="19sp"
             android:textStyle="bold"
-            tools:text="AAPL"
+            app:layout_constraintEnd_toStartOf="@id/tvCurrentPrice"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="AAPL" />
 
         <TextView
             android:id="@+id/tvAssetType"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textSize="14sp"
-            tools:text="Stock"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/exo2_regular"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@id/tvDividendYield"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvTicker" />
+            app:layout_constraintTop_toBottomOf="@id/tvTicker"
+            tools:text="Stock" />
 
         <TextView
             android:id="@+id/tvCurrentPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/exo2_regular"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
-            android:textStyle="bold"
-            tools:text="$150.25"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="$150.25" />
 
         <TextView
             android:id="@+id/tvDividendYield"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/exo2_regular"
+            android:textColor="@color/text_secondary"
             android:textSize="14sp"
-            tools:text="Dividend: 0.65%"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvCurrentPrice" />
+            app:layout_constraintTop_toBottomOf="@id/tvCurrentPrice"
+            tools:text="Dividend: 0.65%" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

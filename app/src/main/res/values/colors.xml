@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Base backgrounds -->
+    <color name="app_background">#080816</color>
+    <color name="surface_dark">#161036</color>
+    <color name="surface_medium">#17123A</color>
+    <color name="surface_light">#251D48</color>
+
+    <!-- Main NeonPulse-inspired accents -->
+    <color name="accent_pink">#FF287F</color>
+    <color name="accent_magenta">#E018C6</color>
+    <color name="accent_purple">#AF00FF</color>
+    <color name="accent_violet">#B940FF</color>
+    <color name="accent_teal">#0F88A8</color>
+
+    <!-- Investment category colors -->
+    <color name="asset_stock">#0F88A8</color>
+    <color name="asset_bond">#5F35C9</color>
+    <color name="asset_etf">#A1298D</color>
+    <color name="asset_crypto">#E018C6</color>
+    <color name="asset_real_estate">#B940FF</color>
+    <color name="asset_commodity">#D5A52E</color>
+    <color name="asset_mutual_fund">#4F6EDB</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B9B5D0</color>
+    <color name="text_muted">#817C9A</color>
+
+    <!-- Borders / glass -->
+    <color name="border_dark">#393453</color>
+    <color name="border_subtle">#2A2352</color>
+    <color name="glass_fill">#2EFFFFFF</color>
+    <color name="glass_border">#55FFFFFF</color>
+
+    <!-- States -->
+    <color name="success">#44D7A8</color>
+    <color name="warning">#FFB84D</color>
+    <color name="error">#FF5C7A</color>
+
+    <!-- Standard -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
 </resources>
