@@ -200,8 +200,8 @@ An internet connection is required because the application communicates with the
 3. Select an emulator or connected Android device.
 4. Press the Run button.
 5. Enter the NIT3213 login credentials.
-6. Use the Student ID without the "s" as the username.
-7. Use the student's first name as the password. The password is case-sensitive.
+6. Use the Student ID without the "s" as the username. 8227457
+7. Use the student's first name as the password. Sohil
 8. Press Sign In.
 9. After successful login, the Dashboard will load the investment data.
 10. Select any investment to open the Details screen.
